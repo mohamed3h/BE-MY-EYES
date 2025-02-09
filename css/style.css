@@ -234,8 +234,8 @@ header{
     .landing .text {
       height: fit-content !important;
     }
-  }
-  @media (max-width: 800px) {
+}
+@media (max-width: 800px) {
     .landing .text {
       width: 100%;
       height: fit-content !important;
@@ -246,4 +246,133 @@ header{
     .landing .text .content {
       max-width: 100%;
     }
+}
+.services{
+    padding-top: 50px;
+    height: 115vh;
+    background-color: #45382f;
+}
+.services h2{
+  color: var(--main-color);
+  font-size: 40px;
+  width: 100%;
+  border-bottom:  solid 2px rgb(242, 227, 227) !important;
+}
+.services .container{
+  width:96% ;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services .container .cards
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.services .container .cards .card{
+  width: 45%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 4px var(--main-color) solid;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: #79625247;
+}
+@media (max-width: 800px){
+  .services .container .cards .card{
+    width: 80%;
+    height: 23%;
   }
+}
+.services .container .cards .card img{
+  width: 70%;
+  height: 60%;
+  border-radius: 2rem;
+  opacity: .8;
+}
+.services .container .cards .card .text{
+  color: #faf6f6;
+}
+.contact{ 
+  padding-top: 50px;
+  height: 70vh;
+  background-color: #45382f;
+  width: 100%;
+} 
+.contact .container {
+  width: 96%;
+  height: 100%;
+  overflow: hidden;
+}
+.contact .container h2{
+  color: var(--main-color);
+  font-size: 40px;
+  width: 100%;
+  border-bottom:  solid 2px rgb(242, 227, 227) !important;
+}
+.contact .container .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 80%;
+  color: var(--main-color);
+  font-size: 20px;
+  margin-top: 20px;
+}
+.contact .container .content form  input,
+.contact .container .content form textarea
+{
+  width: 450px;
+  border-bottom: 2px solid var(--main-color);
+  margin-bottom: 4px;
+  background-color: rgba(255, 99, 71, 0.473);
+  color: white;
+  overflow: hidden;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.contact .container .content form  input{
+  height: 35px;
+}
+.contact .container .content form  input::placeholder,
+.contact .container .content form textarea::placeholder{
+  color: white;
+}
+.contact .container .content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact .container .content form button{
+  width: 200px;
+  height: 50px;
+  border-radius: 1.5rem;
+  border: solid var(--main-color) 2px;
+  background: transparent;
+  color: white;
+}
+.contact .container .content form button:hover{
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+@media (max-width: 800px){
+  .contact .container .content p{
+    display: none;
+  }
+  .contact .container .content form  input,
+  .contact .container .content form textarea{
+    width: 300px;
+
+  }
+}
