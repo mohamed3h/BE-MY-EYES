@@ -118,3 +118,109 @@ header .logo p {
   font-size: 80px;
   color: #f6f6f6;
 }
+.container-slide {
+  /* width: 1120px; */
+  max-width: 100%;
+  max-height: 100%;
+  height: 100vh;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.slider-wrapper {
+  margin: 0 30px 20px;
+  padding: 20px 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+}
+.card {
+  background: var(--main-color);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00000030;
+  height: 70%;
+}
+.content-img,
+.content-box {
+  padding: 30px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content-img {
+  position: relative;
+  row-gap: 5px;
+}
+
+.card-img {
+  width: 70%;
+  height: 230px;
+  position: relative;
+  border-radius: 100px;
+  /* background: #fff; */
+  /* padding: 3px; */
+}
+.card-img .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+}
+.content-box .username {
+  font-size: 26px;
+  font-weight: 600;
+  color: #134ca9;
+  padding-bottom: 6px;
+  z-index: 1;
+}
+.content-box .user-profession {
+  font-size: 16px;
+  font-weight: 500;
+  color: #09003a;
+}
+.social-icon {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+}
+.social-icon li {
+  list-style: none;
+}
+
+.social-icon li a:hover::before {
+  width: 100%;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+.slider-wrapper .swiper-pagination-bullet {
+  background: #00039d;
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+}
+.slider-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.slider-wrapper .swiper-slide-button {
+  color: #00039d;
+  margin-top: -40px;
+  transition: 0.5s;
+}
+.slider-wrapper .swiper-slide-button:hover {
+  color: #ff008c;
+}
+/* Responsive Code */
+@media screen and (max-width: 768px) {
+  .slider-wrapper {
+    margin: 0 20px 20px;
+    padding: 20px 30px;
+  }
+}

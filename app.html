@@ -16,6 +16,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
 </head>
 
 <body>
@@ -30,10 +34,68 @@
         </div>
     </header>
     <div class="hero">
-        <div class="overlay"></div>
-        <button><i class="fa-solid fa-camera"></i></i></button>
+        <div class="container-slide swiper">
+            <div class="slider-wrapper">
+                <div class="card-box swiper-wrapper">
+
+                    <!-- Copy and Paste 5 more Times -->
+                    <div class="card swiper-slide">
+                        <div class="content-img">
+                            <div class="card-img">
+                                <img decoding="async" src="images/money-rec.png" alt="User Image" class="card-image">
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <h2 class="username">Currency Recognition</h2>
+                            <p class="user-profession" style="color: white;">this option is for recognizing currency
+                                within
+                                images</p>
+
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+                        <div class="content-img">
+
+                            <div class="card-img">
+                                <img decoding="async" src="images/ocr.jpeg" alt="User Image" class="card-image">
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <h2 class="username">Text Recognition</h2>
+                            <p class="user-profession" style="color: white;">this option is for recognizing text within
+                                images</p>
+
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+                        <div class="content-img">
+
+                            <div class="card-img">
+                                <img decoding="async" src="images/scene.jpeg" alt="User Image" class="card-image">
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <h2 class="username">Scene Description</h2>
+                            <p class="user-profession" style="color: white;">this option is for describing scenes within
+                                images</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </div>
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="apmain.js"></script>
+
 </body>
 
 </html>
