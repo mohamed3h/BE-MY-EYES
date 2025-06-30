@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APP</title>
     <link rel="stylesheet" href="css/appstyle.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Render All Elements Normally -->
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- Font Awesome Library -->
@@ -51,7 +52,6 @@
                                 recognizing currency
                                 within
                                 images</p>
-
                         </div>
                     </div>
 
@@ -96,9 +96,58 @@
 
     </div>
 
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>CONTACT</h2>
+            <div class="content">
+                <p>Thank you for your interest. Please fill out the form and i will get back to you promptly
+                    regarding your request.</p>
+                <form>
+                    <div>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div>
+                        <textarea rows="4" name="" id="" placeholder="Message"></textarea>
+                    </div>
+                    <button class="main-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer
+        style="width:100%;background:#7a548d;color:#fff;text-align:center;padding:18px 0 12px 0;font-family:'Open Sans',sans-serif;font-size:1rem;letter-spacing:1px;margin-top:32px;">
+        &copy; 2024 BE MY EYES. All rights reserved.
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="apmain.js"></script>
 
+    <!-- Add a modal for camera preview at the end of body -->
+    <div id="camera-modal"
+        style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;flex-direction:column;">
+        <button onclick="closeCameraModal()"
+            style="position:absolute;top:32px;right:32px;padding:10px 24px;font-size:1.1rem;border-radius:1rem;border:none;background:#7a548d;color:#fff;z-index:10001;">Close</button>
+        <video id="camera-video" autoplay playsinline
+            style="max-width:90vw;max-height:70vh;border-radius:1rem;"></video>
+    </div>
+
+    <!-- Add a script to ensure scrolling is disabled on both body and html when camera modal is open -->
+    <script>
+        function disableScrolling() {
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        }
+        function enableScrolling() {
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+    </script>
 
 </body>
 
