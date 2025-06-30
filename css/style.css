@@ -138,6 +138,33 @@ header nav ul a {
   position: relative;
   z-index: 2;
 }
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(
+    122,
+    84,
+    141,
+    0.98
+  ); /* match .services bg, but slightly transparent */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+header.sticky .container::after {
+  background-color: #fff;
+}
+header.sticky nav ul a {
+  color: #fff;
+}
+header.sticky nav ul a.active,
+header.sticky nav ul a:hover {
+  color: #00e6ff;
+  border-bottom: 2px solid #00e6ff;
+}
+
 header nav ul a.active,
 header nav ul a:hover {
   color: #00e6ff;
@@ -524,30 +551,4 @@ header nav .form i {
   .contact .container .content form textarea {
     width: 350px;
   }
-}
-header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(
-    122,
-    84,
-    141,
-    0.98
-  ); /* match .services bg, but slightly transparent */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  z-index: 100;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-header.sticky .container::after {
-  background-color: #fff;
-}
-header.sticky nav ul a {
-  color: #fff;
-}
-header.sticky nav ul a.active,
-header.sticky nav ul a:hover {
-  color: #00e6ff;
-  border-bottom: 2px solid #00e6ff;
 }
