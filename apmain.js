@@ -68,6 +68,10 @@ function openCameraModal() {
   if (window.speechSynthesis && window.speechSynthesis.speaking) {
     window.speechSynthesis.cancel();
   }
+  // Stop the slider autoplay
+  if (swiper && swiper.autoplay) {
+    swiper.autoplay.stop();
+  }
   const modal = document.getElementById("camera-modal");
   const video = document.getElementById("camera-video");
   modal.style.display = "flex";
@@ -109,6 +113,10 @@ function closeCameraModal() {
   modal.style.display = "none";
   // Restore background scrolling
   if (typeof enableScrolling === "function") enableScrolling();
+  // Restart the slider autoplay
+  if (swiper && swiper.autoplay) {
+    swiper.autoplay.start();
+  }
   if (video._stream) {
     video._stream.getTracks().forEach((track) => track.stop());
     video.srcObject = null;
